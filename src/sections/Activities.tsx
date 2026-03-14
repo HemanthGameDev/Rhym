@@ -25,7 +25,9 @@ export default function Activities() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {activities.map((activity, index) => {
-            const IconComponent = Icons[activity.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
+            const IconComponent = (
+              Icons[activity.icon as keyof typeof Icons] ?? Icons.ToyBrick
+            ) as React.ComponentType<{ className?: string }>;
             return (
               <motion.div
                 key={activity.id}

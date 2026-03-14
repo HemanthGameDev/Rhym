@@ -1,5 +1,5 @@
+import { Clock, Mail, MapPin, Phone, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Clock, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
 import { schoolInfo } from '../data/content';
 
 const quickLinks = [
@@ -12,12 +12,6 @@ const quickLinks = [
   { name: 'Contact', path: '/contact' },
 ];
 
-const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
@@ -26,7 +20,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R&R</span>
+                <span className="text-white font-bold text-xl">R&amp;R</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg">{schoolInfo.name}</span>
@@ -36,18 +30,6 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed">
               A nurturing preschool where children learn through play, creativity, and care. Building strong foundations for lifelong learning.
             </p>
-            <div className="flex space-x-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>
@@ -113,7 +95,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
               <div className="flex items-center space-x-2 mb-2">
-                <span className="text-2xl">⭐</span>
+                <Star className="h-6 w-6 fill-yellow-400 text-yellow-400" />
                 <div>
                   <p className="font-bold text-xl">{schoolInfo.rating}</p>
                   <p className="text-xs text-gray-400">{schoolInfo.reviews} Google Reviews</p>
@@ -125,7 +107,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-700 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} {schoolInfo.name} Preschool. All rights reserved.
+            &copy; {new Date().getFullYear()} {schoolInfo.name} Preschool. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import AdmissionForm from '../components/AdmissionForm';
 import { schoolInfo } from '../data/content';
 
 export default function Contact() {
@@ -19,7 +20,7 @@ export default function Contact() {
             Visit Us Today
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We'd love to meet you and show you around our preschool. Schedule a visit today!
+            We&apos;d love to meet you and show you around our preschool. Schedule a visit today!
           </p>
         </motion.div>
 
@@ -82,7 +83,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-xl text-gray-900 mb-2">Working Hours</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    <span className="font-semibold text-gray-800">Monday – Saturday:</span><br />
+                    <span className="font-semibold text-gray-800">Monday - Saturday:</span><br />
                     8:00 AM onwards<br /><br />
                     <span className="font-semibold text-gray-800">Sunday:</span><br />
                     Closed
@@ -116,19 +117,26 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-2xl h-full min-h-[600px]"
+            className="overflow-hidden rounded-2xl bg-white shadow-2xl"
           >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.6437822002626!2d78.55949697493344!3d17.33272798354511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9fa78037b8bd%3A0xef4617938f502bbc!2sRhythm%20n%20Rhymez!5e0!3m2!1sen!2sin!4v1773489524779!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0, minHeight: '600px' }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Rhythm n Rhymez Location"
-            ></iframe>
+            <div className="w-full h-[450px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.6437822002626!2d78.55949697493344!3d17.33272798354511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9fa78037b8bd%3A0xef4617938f502bbc!2sRhythm%20n%20Rhymez!5e0!3m2!1sen!2sin!4v1773489524779!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-full w-full"
+                title="Google map for Rhythm n Rhymez Preschool in Vanasthalipuram"
+              ></iframe>
+            </div>
           </motion.div>
+        </div>
+
+        <div className="mt-12">
+          <AdmissionForm />
         </div>
       </div>
     </section>

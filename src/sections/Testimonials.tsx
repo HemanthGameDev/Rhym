@@ -78,7 +78,15 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all"
+              animate={{
+                scale: activeIndex === index ? 1.02 : 1,
+                opacity: activeIndex === index ? 1 : 0.88,
+              }}
+              className={`rounded-2xl p-8 shadow-xl transition-all hover:shadow-2xl ${
+                activeIndex === index
+                  ? 'bg-white shadow-2xl ring-4 ring-white/30'
+                  : 'bg-white/95 backdrop-blur-md'
+              }`}
             >
               <Quote className="w-10 h-10 text-blue-600 mb-4" />
               <div className="flex mb-4" aria-label={`Rating: ${testimonial.rating} out of 5 stars`}>

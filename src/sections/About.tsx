@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Heart, Users, Award, Sparkles } from 'lucide-react';
+import { Award, BookOpen, Heart, Sparkles, Users } from 'lucide-react';
 
 const focusAreas = [
   { icon: BookOpen, text: 'Academic basics' },
@@ -64,8 +64,11 @@ export default function About() {
                 className="relative h-64 rounded-2xl overflow-hidden shadow-xl"
               >
                 <img
-                  src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Children learning"
+                  src="/images/Screenshot_2026-03-14_170218.png"
+                  alt="Preschool children learning together with classroom guidance"
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -74,8 +77,11 @@ export default function About() {
                 className="relative h-64 rounded-2xl overflow-hidden shadow-xl mt-8"
               >
                 <img
-                  src="https://images.pexels.com/photos/8364026/pexels-photo-8364026.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Happy children"
+                  src="/images/school-7.png"
+                  alt="Happy preschoolers enjoying a playful learning moment"
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -84,8 +90,11 @@ export default function About() {
                 className="relative h-64 rounded-2xl overflow-hidden shadow-xl -mt-8"
               >
                 <img
-                  src="https://images.pexels.com/photos/8613311/pexels-photo-8613311.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Creative activities"
+                  src="/images/school-8.png"
+                  alt="Children taking part in creative preschool art activities"
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -94,8 +103,11 @@ export default function About() {
                 className="relative h-64 rounded-2xl overflow-hidden shadow-xl"
               >
                 <img
-                  src="https://images.pexels.com/photos/8613317/pexels-photo-8613317.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Group learning"
+                  src="/images/school-9.png"
+                  alt="Group learning session for preschool children in a bright classroom"
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -107,7 +119,7 @@ export default function About() {
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: 'easeInOut',
               }}
               className="absolute -top-6 -left-6 w-24 h-24 bg-yellow-400 rounded-full blur-3xl opacity-50"
             ></motion.div>
@@ -118,7 +130,7 @@ export default function About() {
               transition={{
                 duration: 5,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: 'easeInOut',
               }}
               className="absolute -bottom-6 -right-6 w-32 h-32 bg-pink-400 rounded-full blur-3xl opacity-50"
             ></motion.div>

@@ -21,7 +21,7 @@ export default function Hero() {
           }}
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            backgroundImage: "url('/images/Screenshot_2026-03-14_170728.png')",
           }}
         ></motion.div>
       </div>
